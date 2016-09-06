@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{F8EF6170-54D1-4DDC-83B8-8322F14B5418}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="assets\area.png" />
+    <Content Include="assets\enemies\ac1.png" />
+    <Content Include="assets\enemies\ac2.png" />
+    <Content Include="assets\enemies\ac3.png" />
+    <Content Include="assets\enemies\ape.png" />
+    <Content Include="assets\enemies\aro.png" />
+    <Content Include="assets\enemies\axe.png" />
+    <Content Include="assets\enemies\bad.png" />
+    <Content Include="assets\enemies\blk.png" />
+    <Content Include="assets\enemies\dog.png" />
+    <Content Include="assets\enemies\dra.png" />
+    <Content Include="assets\enemies\hop.png" />
+    <Content Include="assets\enemies\met.png" />
+    <Content Include="assets\enemies\mn1.png" />
+    <Content Include="assets\enemies\mn2.png" />
+    <Content Include="assets\enemies\mn3.png" />
+    <Content Include="assets\enemies\mn4.png" />
+    <Content Include="assets\enemies\mn5.png" />
+    <Content Include="assets\enemies\mn6.png" />
+    <Content Include="assets\enemies\mn7.png" />
+    <Content Include="assets\enemies\mor.png" />
+    <Content Include="assets\enemies\nll.png" />
+    <Content Include="assets\enemies\nt1.png" />
+    <Content Include="assets\enemies\nt2.png" />
+    <Content Include="assets\enemies\nt3.png" />
+    <Content Include="assets\enemies\oc1.png" />
+    <Content Include="assets\enemies\oc2.png" />
+    <Content Include="assets\enemies\pop.png" />
+    <Content Include="assets\enemies\ren.png" />
+    <Content Include="assets\enemies\rep.png" />
+    <Content Include="assets\enemies\rhi.png" />
+    <Content Include="assets\enemies\roc.png" />
+    <Content Include="assets\enemies\rot.png" />
+    <Content Include="assets\enemies\scy.png" />
+    <Content Include="assets\enemies\spk.png" />
+    <Content Include="assets\enemies\stn.png" />
+    <Content Include="assets\enemies\thr.png" />
+    <Content Include="assets\enemies\ver.png" />
+    <Content Include="assets\enemies\vsp.png" />
+    <Content Include="assets\hero.png" />
+    <Content Include="assets\hud.png" />
+    <Content Include="assets\miscspr.png" />
+    <Content Include="css\app.css" />
+    <Content Include="index.html" />
+    <Content Include="js\barb.js" />
+    <Content Include="js\lib\phaser.min.js" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\enemies\ac1.json" />
+    <Content Include="assets\enemies\ac2.json" />
+    <Content Include="assets\enemies\ac3.json" />
+    <Content Include="assets\enemies\ape.json" />
+    <Content Include="assets\enemies\aro.json" />
+    <Content Include="assets\enemies\axe.json" />
+    <Content Include="assets\enemies\bad.json" />
+    <Content Include="assets\enemies\blk.json" />
+    <Content Include="assets\enemies\dog.json" />
+    <Content Include="assets\enemies\dra.json" />
+    <Content Include="assets\enemies\hop.json" />
+    <Content Include="assets\enemies\met.json" />
+    <Content Include="assets\enemies\mn1.json" />
+    <Content Include="assets\enemies\mn2.json" />
+    <Content Include="assets\enemies\mn3.json" />
+    <Content Include="assets\enemies\mn4.json" />
+    <Content Include="assets\enemies\mn5.json" />
+    <Content Include="assets\enemies\mn6.json" />
+    <Content Include="assets\enemies\mn7.json" />
+    <Content Include="assets\enemies\mor.json" />
+    <Content Include="assets\enemies\nll.json" />
+    <Content Include="assets\enemies\nt1.json" />
+    <Content Include="assets\enemies\nt2.json" />
+    <Content Include="assets\enemies\nt3.json" />
+    <Content Include="assets\enemies\oc1.json" />
+    <Content Include="assets\enemies\oc2.json" />
+    <Content Include="assets\enemies\pop.json" />
+    <Content Include="assets\enemies\ren.json" />
+    <Content Include="assets\enemies\rep.json" />
+    <Content Include="assets\enemies\rhi.json" />
+    <Content Include="assets\enemies\roc.json" />
+    <Content Include="assets\enemies\rot.json" />
+    <Content Include="assets\enemies\scy.json" />
+    <Content Include="assets\enemies\spk.json" />
+    <Content Include="assets\enemies\stn.json" />
+    <Content Include="assets\enemies\thr.json" />
+    <Content Include="assets\enemies\ver.json" />
+    <Content Include="assets\enemies\vsp.json" />
+    <Content Include="assets\area.json" />
+    <Content Include="assets\enemyanims.json" />
+    <Content Include="assets\hero.json" />
+    <Content Include="assets\heroanims.json" />
+    <Content Include="assets\miscspr.json" />
+    <Content Include="assets\rooms.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>barbwebtest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50159</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50159/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

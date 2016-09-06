@@ -1,0 +1,17 @@
+﻿body {
+    margin: 0px 0px 1px 0px; /* the extra 1px allows the iOS inner/outer check to work */
+    background: #495D6B;
+}
+
+#game {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* Prevent canvas from blurring image */
+    image-rendering: pixelated;              /* Chrome */
+    image-rendering: -moz-crisp-edges;       /* Firefox */
+    image-rendering: -o-crisp-edges;         /* Opera */
+}
