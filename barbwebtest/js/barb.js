@@ -13,7 +13,7 @@ var Barbarian;
         __extends(Game, _super);
         function Game() {
             _super.call(this, 640, 400, Phaser.CANVAS, 'game', null);
-            this.roomNum = 0x2E;
+            this.roomNum = 0x00;
             this.debugOn = false;
             this.state.add('Boot', new Barbarian.Boot());
             this.state.add('Layout', new Barbarian.Layout());
