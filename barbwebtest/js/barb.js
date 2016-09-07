@@ -1397,6 +1397,7 @@ var Barbarian;
             }
         };
         Layout.prototype.create = function () {
+            var _this = this;
             this.roomsJSON = this.cache.getJSON('rooms');
             this.game.level = new Barbarian.Level(this.game, this.roomsJSON);
             this.stage.smoothed = false;
@@ -1409,6 +1410,16 @@ var Barbarian;
             this.game.hero.onDied.add(this.heroDied, this);
             var hud = this.make.image(0, 320, 'hud');
             this.stage.addChild(hud);
+            hud.inputEnabled = true;
+            hud.events.onInputDown.add(function (sprite, pointer) {
+                console.log('here');
+                if (pointer.x >= 120 && pointer.x < 160) {
+                    _this.game.hero.keys.right.isDown = true;
+                }
+                else if (pointer.x >= 160 && pointer.x < 240) {
+                    _this.game.hero.keys.right.isDown = false;
+                }
+            }, this);
         };
         Layout.prototype.createEffect = function (x, y, name) {
             var effect = this.add.sprite(x, y, 'misc');
@@ -1519,7 +1530,7 @@ var Barbarian;
                 this.world.add(createdEnemy);
                 this.enemies.push(createdEnemy);
             }
-            for (var _f = 0, _g = this.game.level.getRoomItems(this.game.roomNum); _f < _g.length; _f++) {
+            for (var _f = 0, _g = this.game.level.getRoomItems(this.game.roomNum) ; _f < _g.length; _f++) {
                 var item = _g[_f];
                 this.world.add(item);
             }
@@ -1557,7 +1568,7 @@ var Barbarian;
                 Barbarian.Hero.FIXED_TIMESTEP += 5;
             }
             if (this.game.hero.isAttackingWithSword) {
-                for (var _i = 0, _a = this.enemies.filter(function (e) { return e.isKillable; }); _i < _a.length; _i++) {
+                for (var _i = 0, _a = this.enemies.filter(function (e) { return e.isKillable; }) ; _i < _a.length; _i++) {
                     var enemy = _a[_i];
                     var enemyBounds = new Phaser.Rectangle().copyFrom(enemy.getBounds());
                     if (enemyBounds.intersects(this.game.hero.getSwordBounds(), 0)) {
@@ -1565,9 +1576,9 @@ var Barbarian;
                     }
                 }
             }
-            for (var _b = 0, _c = this.world.children.filter(function (obj) { return obj instanceof Barbarian.Arrow && obj.alive; }); _b < _c.length; _b++) {
+            for (var _b = 0, _c = this.world.children.filter(function (obj) { return obj instanceof Barbarian.Arrow && obj.alive; }) ; _b < _c.length; _b++) {
                 var arrow = _c[_b];
-                for (var _d = 0, _e = this.enemies.filter(function (e) { return e.isKillable; }); _d < _e.length; _d++) {
+                for (var _d = 0, _e = this.enemies.filter(function (e) { return e.isKillable; }) ; _d < _e.length; _d++) {
                     var enemy = _e[_d];
                     var enemyBounds = new Phaser.Rectangle().copyFrom(enemy.getBounds()).inflate(Barbarian.TILE_SIZE / 2, Barbarian.TILE_SIZE * 2);
                     var arrowBounds = new Phaser.Rectangle().copyFrom(arrow.getBounds());
@@ -1688,7 +1699,7 @@ var Barbarian;
         Level.prototype.pickUpItem = function (hero) {
             var closestItem = null;
             var closestDelta = 0xFFFF;
-            for (var _i = 0, _a = this.getRoomItems(this.game.roomNum); _i < _a.length; _i++) {
+            for (var _i = 0, _a = this.getRoomItems(this.game.roomNum) ; _i < _a.length; _i++) {
                 var item = _a[_i];
                 if (item.y == hero.y) {
                     var delta = Math.abs(item.x - hero.x);
